@@ -44,16 +44,16 @@ jar {
 }
 
 dependencies {
-    testCompile 'org.hamcrest:hamcrest-all:1.3'
+    testImplementation 'org.hamcrest:hamcrest-all:1.3'
 
-    testCompile 'org.apiguardian:apiguardian-api:1.0.0',
+    testImplementation 'org.apiguardian:apiguardian-api:1.0.0',
                 'org.junit.jupiter:junit-jupiter-engine:5.0.2'
 
-    assessmentCompile group: 'com.google.guava', name: 'guava', version: '23.6-jre'
-    assessmentCompile group: 'cglib', name: 'cglib-nodep', version: '2.2'
-    assessmentCompile 'org.junit.platform:junit-platform-console:1.0.0'
-    assessmentCompile sourceSets.main.output
-    assessmentCompile configurations.testCompile
+    assessmentImplementation 'com.google.guava:guava:23.6-jre'
+    assessmentImplementation 'cglib:cglib-nodep:2.2'
+    assessmentImplementation 'org.junit.platform:junit-platform-console:1.0.0'
+    assessmentImplementation sourceSets.main.output
+    assessmentImplementation configurations.testImplementation
     assessmentRuntime configurations.testRuntime
 }
 
@@ -90,7 +90,6 @@ assess.finalizedBy test
 test.finalizedBy jacocoTestReport
 jacocoTestReport.finalizedBy jacocoTestCoverageVerification
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.4.1'
-    distributionType = Wrapper.DistributionType.ALL
+wrapper {
+    gradleVersion = '4.10.3'
 }
