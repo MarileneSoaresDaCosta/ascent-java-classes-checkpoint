@@ -39,8 +39,8 @@ task assess(type: JavaExec) {
 }
 
 jar {
-    baseName = '01-java-classes-checkpoint'
-    version = '0.0.1-SNAPSHOT'
+    setProperty("archiveBaseName", '01-java-classes-checkpoint')
+    setProperty("archiveVersion", '0.0.1-SNAPSHOT') 
 }
 
 dependencies {
@@ -91,5 +91,5 @@ test.finalizedBy jacocoTestReport
 jacocoTestReport.finalizedBy jacocoTestCoverageVerification
 
 wrapper {
-    gradleVersion = '4.10.3'
+    gradleVersion = '6.0.1'
 }
