@@ -90,6 +90,3 @@ assess.finalizedBy test
 test.finalizedBy jacocoTestReport
 jacocoTestReport.finalizedBy jacocoTestCoverageVerification
 
-wrapper {
-    gradleVersion = '6.0.1'
-}
