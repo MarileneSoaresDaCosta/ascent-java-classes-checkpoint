@@ -54,7 +54,7 @@ dependencies {
     assessmentImplementation 'org.junit.platform:junit-platform-console:1.0.0'
     assessmentImplementation sourceSets.main.output
     assessmentImplementation configurations.testImplementation
-    assessmentRuntime configurations.testRuntime
+    assessmentRuntimeOnly configurations.testRuntimeOnly
 }
 
 test {
