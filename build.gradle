@@ -75,16 +75,6 @@ jacocoTestReport {
     executionData junitPlatformTest
 }
 
-jacocoTestCoverageVerification {
-    violationRules {
-        rule {
-            limit {
-                minimum = 0.9
-            }
-        }
-    }
-}
-
 junitPlatformTest.finalizedBy jacocoTestReport
 assess.finalizedBy test
 test.finalizedBy jacocoTestReport
