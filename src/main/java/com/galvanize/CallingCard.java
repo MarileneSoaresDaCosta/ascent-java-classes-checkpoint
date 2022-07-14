@@ -2,6 +2,7 @@
 package com.galvanize;
 
 public class CallingCard {
+
     // fields
     private int costPerMin;
     private int balance;
@@ -30,6 +31,10 @@ public class CallingCard {
 
     public void useMinutes(int usedMin) {
         this.remainingMinutes -= usedMin;
+
+        this.balance -= (usedMin * this.costPerMin);
     }
+
+
 
 }
